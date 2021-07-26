@@ -6,8 +6,11 @@ namespace Variables
   {
     static void Main(string[] args)
     {
-      string phrase = "Giraffe Academy";
-      Console.WriteLine( phrase.Substring(8, 3) );
+      Console.Write("Enter your name: ");
+      string name = Console.ReadLine();
+      Console.Write("Enter your age: ");
+      string age = Console.ReadLine();
+      Console.WriteLine("Hello " + name + " you are " + age);
     }
   }
 }
