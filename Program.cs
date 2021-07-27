@@ -4,14 +4,30 @@ namespace Variables
 {
   class Program
   {
-    static void Main (string[] args)
+    static void Main(string[] args)
     {
-      int[] luckyNumbers = { 4, 8, 15, 16, 23, 42 };
-      
-      for (int i = 0; i < luckyNumbers.Length; i++)
+      try
       {
-        Console.WriteLine(luckyNumbers[i]);
+      Console.Write("Enter a number: ");
+      int num1 = Convert.ToInt32(Console.ReadLine());
+      Console.Write("Enter another number: ");
+      int num2 = Convert.ToInt32(Console.ReadLine());
+
+      Console.WriteLine(num1 / num2);
       }
+      catch (DivideByZeroException e)
+      {
+        Console.WriteLine(e.Message);
+      }
+      catch (FormatException e) {
+        Console.WriteLine(e.Message);
+      }
+      finally
+      {
+        Console.WriteLine("finally")
+      }
+      Console.ReadLine();
     }
+
   }
 }
