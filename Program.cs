@@ -6,24 +6,34 @@ namespace Variables
   {
     static void Main(string[] args)
     {
-      Console.WriteLine(GetMax(90, 40, 30));
-    }
 
-    static int GetMax(int num1, int num2, int num3)
-    {
-      int result;
-      if (num1 >= num2 && num1 >= num3)
+      Console.Write("Enter a number: ");
+      double num1 = Convert.ToDouble(Console.ReadLine());
+
+      Console.Write("Enter Operator: ");
+      string op = Console.ReadLine();
+
+      Console.Write("Enter a number: ");
+      double num2 = Convert.ToDouble(Console.ReadLine());
+
+      if (op == "+")
       {
-        result = num1;
-      } else if (num2 >= num1 && num2 >= num3)
+        Console.WriteLine(num1 + num2);
+      } else if (op == "-")
       {
-        result = num2;
+        Console.WriteLine(num1 - num2);
+      } else if (op == "/")
+      {
+        Console.WriteLine(num1 / num2);
+      } else if (op == "*")
+      {
+        Console.WriteLine(num1 * num2);
       } else
       {
-        result = num3;
+        Console.WriteLine("Invalid Operator");
       }
-      return result;
     }
+
 
   }
 }
