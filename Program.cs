@@ -6,14 +6,21 @@ namespace Variables
   {
     static void Main(string[] args)
     {
-    int cubedNumber = cube(5);
-    Console.WriteLine(cubedNumber);
-    }
-
-    static int cube(int num)
-    {
-      int result = num * num * num;
-      return result;
+      bool isMale = true;
+      bool isTall = true;
+      if (isMale && isTall)
+      {
+        Console.WriteLine("You are a tall male");
+      } else if (isMale && !isTall) 
+      {
+        Console.WriteLine("You are a short male");
+      } else if (!isMale && isTall) 
+      {
+        Console.WriteLine("You are not a male and you are not tall");
+      } else
+      {
+        Console.WriteLine("You are not male and you are not tall");
+      }
     }
 
   }
