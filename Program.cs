@@ -7,12 +7,30 @@ namespace Variables
     static void Main(string[] args)
     {
 
-      int index = 6;
+      string secretWord = "giraffe";
+      string guess = "";
+      int guessCount = 0;
+      int guessLimit = 3;
+      bool outOfGuesses = false;
       do
       {
-        Console.WriteLine(index);
-        index++;
-      } while (index <= 5);
+        if (guessCount < guessLimit)
+        {
+          Console.Write("Enter guess: ");
+          guess = Console.ReadLine();
+          guessCount++;
+        } else
+        {
+          outOfGuesses = true;
+        }
+      } while (guess != secretWord && !outOfGuesses);
+      if (outOfGuesses) 
+      {
+       Console.WriteLine("You Lose!"); 
+      } else
+      {
+        Console.WriteLine("You Win!");
+      }
 
     }
 
