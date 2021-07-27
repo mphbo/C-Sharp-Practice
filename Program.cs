@@ -6,12 +6,15 @@ namespace Variables
   {
     static void Main(string[] args)
     {
-      SayHi("Logan", 27);
+    int cubedNumber = cube(5);
+    Console.WriteLine(cubedNumber);
     }
 
-    static void SayHi(string name, int age) 
+    static int cube(int num)
     {
-      Console.WriteLine("Hello " + name + " you are " + age + " today!");
+      int result = num * num * num;
+      return result;
     }
+
   }
 }
