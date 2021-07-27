@@ -7,31 +7,45 @@ namespace Variables
     static void Main(string[] args)
     {
 
-      Console.Write("Enter a number: ");
-      double num1 = Convert.ToDouble(Console.ReadLine());
+      Console.WriteLine("Pick a number representing a day of the week.");
+      int dayNum = Convert.ToInt16(Console.ReadLine());
+      Console.WriteLine(GetDay(dayNum));
 
-      Console.Write("Enter Operator: ");
-      string op = Console.ReadLine();
+    }
 
-      Console.Write("Enter a number: ");
-      double num2 = Convert.ToDouble(Console.ReadLine());
+    static string GetDay(int dayNum) 
+    {
+      string dayName;
 
-      if (op == "+")
+      switch (dayNum)
       {
-        Console.WriteLine(num1 + num2);
-      } else if (op == "-")
-      {
-        Console.WriteLine(num1 - num2);
-      } else if (op == "/")
-      {
-        Console.WriteLine(num1 / num2);
-      } else if (op == "*")
-      {
-        Console.WriteLine(num1 * num2);
-      } else
-      {
-        Console.WriteLine("Invalid Operator");
+        case 0:
+          dayName = "Sunday";
+          break;
+        case 1:
+          dayName = "Monday";
+          break;
+        case 2:
+          dayName = "Wednesday";
+          break;
+        case 3:
+          dayName = "Thursday";
+          break;
+        case 4:
+          dayName = "Friday";
+          break;
+        case 5:
+          dayName = "Saturday";
+          break;
+        case 6:
+          dayName = "Sunday";
+          break;
+        default:
+          dayName = "Invalid Day Number";
+          break;
       }
+
+      return dayName;
     }
 
 
